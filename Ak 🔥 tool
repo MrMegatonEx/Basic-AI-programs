@@ -1,0 +1,766 @@
+
+
+
+
+
+
+function split(szFullString, szSeparator)
+local nFindStartIndex = 1 
+local nSplitIndex = 1 
+local nSplitArray = {} while true do 
+local 
+nFindLastIndex = string.find(szFullString, szSeparator, nFindStartIndex) 
+if not nFindLastIndex then 
+nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, string.len(szFullString)) 
+break end 
+nSplitArray[nSplitIndex] = string.sub(szFullString, nFindStartIndex, nFindLastIndex - 1) 
+nFindStartIndex = nFindLastIndex + string.len(szSeparator) 
+nSplitIndex = nSplitIndex + 1 end return 
+nSplitArray end function 
+xgxc(szpy, qmxg) for x = 1, #(qmxg) do 
+xgpy = szpy + qmxg[x]["offset"] xglx = qmxg[x]["type"] 
+xgsz = qmxg[x]["value"] 
+gg.setValues({[1] = {address = xgpy, flags = xglx, value = xgsz}}) 
+xgsl = xgsl + 1 end end function 
+xqmnb(qmnb) 
+gg.clearResults() 
+gg.setRanges(qmnb[1]["memory"]) 
+gg.searchNumber(qmnb[3]["value"], qmnb[3]["type"]) 
+if gg.getResultCount() == 0 then 
+gg.toast(qmnb[2]["name"] .. "开启失败")
+else 
+gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) 
+gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) 
+gg.refineNumber(qmnb[3]["value"], qmnb[3]["type"]) 
+if gg.getResultCount() == 0 then 
+gg.toast(qmnb[2]["name"] .. "开启失败") 
+else 
+sl = gg.getResults(999999) 
+sz = gg.getResultCount() 
+xgsl = 0 if sz > 999999 then 
+sz = 999999 end for i = 1, sz do 
+pdsz = true for v = 4, #(qmnb) do if 
+pdsz == true then 
+pysz = {} pysz[1] = {} pysz[1].address = sl[i].address + qmnb[v]["offset"] 
+pysz[1].flags = qmnb[v]["type"] 
+szpy = gg.getValues(pysz) 
+pdpd = qmnb[v]["lv"] .. ";" .. szpy[1].value szpd = split(pdpd, ";") 
+tzszpd = szpd[1] 
+pyszpd = szpd[2] 
+if tzszpd == pyszpd then 
+pdjg = true pdsz = true else 
+pdjg = false pdsz = false end end end 
+if pdjg == true then 
+szpy = sl[i].address xgxc(szpy, qmxg) 
+xgjg = true end end 
+if xgjg == true then 
+gg.toast(qmnb[2]["name"] .. "开启成功,共修改" .. xgsl .. "条数据") 
+else 
+gg.toast(qmnb[2]["name"] .. "开启失败") 
+end 
+end 
+end 
+end
+
+
+function Main()
+   SN =gg.choice({
+  ' ✖ [ PvP-Builds ] 💯 No Ban.',
+  ' ✖ [ Antenna ] ',
+  ' ✖ [ Aimbot ] ',
+  ' ✖ [ Clear Land ] ',
+  ' ✖ [ Night Vision ] ',
+  ' ✖ [ Rocket Spam | Underwater Shot ] ',
+  ' ✖ [ X Ray ]',
+  ' ✖ [ Wide Camera ] ',
+  ' ✖ [ Body Color | No Recoil | Clear Water ] ',
+  ' ~Exit',
+ }, nil, " {VHT} 🛑 GIGANT Gaming 🛑") 
+if SN == 1 then
+  b1()
+end
+if SN == 2 then
+  b2()
+end
+if SN == 3 then
+  b3()
+end
+if SN == 4 then
+  b4()
+end
+if SN == 5 then
+  b5()
+end
+if SN == 6 then
+  b6()
+end
+if SN == 7 then
+  b7()
+end
+if SN == 8 then
+  b8()
+end
+if SN == 9 then
+  b9()
+end
+if SN == 10 then
+  Exit()
+end
+XGCK = -1
+end
+
+function b1()
+EV1 = gg.choice({
+"▶ Antenna + Wide View + Clear Land ▶ PvP Club",
+"▶ OP Aimbot + Antenna + ×2 Speed + No Recoil ▶ RIP",
+"▶ X Ray + Antenna + x5 Speed ▶ For Scout",
+"❎ Deactivate All",
+"Back to Menu"
+}, nil, "Combined by Verca💀 [For Aimbot To Work Use Laser]")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bb1()
+end
+if EV1 == 2 then
+bb2()
+end
+if EV1 == 3 then
+bb3()
+end
+if EV1 == 4 then
+bb6()
+end
+if EV1 == 5 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+  function bb1()
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.79084777832' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.71006774902' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084)' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.18151855469' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.84295654297' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('0.000005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('2.99992003187' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('0.00005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('0.0000000001' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("90;7", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("90", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll("130.123456", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Ready to Clap😈")
+end
+
+
+function bb2()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "巨人"},
+{["value"] = -88.02313995361328, ["type"] = 16},
+{["lv"] = 1.0, ["offset"] = 56, ["type"] = 16},
+{["lv"] = 1.0, ["offset"] = 60, ["type"] = 16},
+{["lv"] = 1.0, ["offset"] = 64, ["type"] = 16},
+}
+qmxg = {
+{["value"] = 10, ["offset"] = 56, ["type"] = 16},
+{["value"] = 10, ["offset"] = 60, ["type"] = 16},
+{["value"] = 10, ["offset"] = 64, ["type"] = 16},
+}
+xqmnb(qmnb)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.79084777832' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.71006774902' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.18151855469' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.84295654297' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "二倍"},
+{["value"] = 30000.0, ["type"] = 16},
+{["lv"] = 100.0, ["offset"] = 8, ["type"] = 16},
+{["lv"] = 750.0, ["offset"] = 12, ["type"] = 16},
+}
+qmxg = {
+{["value"] = 0.1, ["offset"] = 120, ["type"] = 16},
+}
+xqmnb(qmnb)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("8.5;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll('0.0000000001' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Terminator Mode ON😈")
+end
+
+function bb3()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "开启透视"},
+{["value"] = 1189765120, ["type"] = 4},
+{["lv"] = 1065353216, ["offset"] = 4, ["type"] = 4},
+{["lv"] = 1120403456, ["offset"] = 8, ["type"] = 4},
+{["lv"] = 1144750080, ["offset"] = 12, ["type"] = 4},
+}
+qmxg = {
+{["value"] = 0, ["offset"] = -728, ["type"] = 16},}
+xqmnb(qmnb)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.79084777832' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.71006774902' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.18151855469' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.84295654297' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "五倍"},
+{["value"] = 30000.0, ["type"] = 16},
+{["lv"] = 100.0, ["offset"] = 8, ["type"] = 16},
+{["lv"] = 750.0, ["offset"] = 12, ["type"] = 16},
+}
+qmxg = {
+{["value"] = 0.4, ["offset"] = 120, ["type"] = 16},
+}
+xqmnb(qmnb)
+end
+
+function bb6()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "关闭透视"},
+{["value"] = 1189765120, ["type"] = 4},
+{["lv"] = 1065353216, ["offset"] = 4, ["type"] = 4},
+{["lv"] = 1120403456, ["offset"] = 8, ["type"] = 4},
+{["lv"] = 1144750080, ["offset"] = 12, ["type"] = 4},
+}
+qmxg = {
+{["value"] = 1, ["offset"] = -728, ["type"] = 16},}
+xqmnb(qmnb)
+qmnb = {
+{["memory"] = 4},
+{["name"] = "加速火神"},
+{["value"] = 30000.0, ["type"] = 16},
+{["lv"] = 100.0, ["offset"] = 8, ["type"] = 16},
+{["lv"] = 750.0, ["offset"] = 12, ["type"] = 16},
+}
+qmxg = {
+{["value"] = 0.0005, ["offset"] = 120, ["type"] = 16},
+}
+xqmnb(qmnb)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('13.11111111' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(1000)
+gg.editAll('1' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('9.11111111' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(1000)
+gg.editAll('1' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('3.11111111' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(1000)
+gg.editAll('1)' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('6.11111111' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(1000)
+gg.editAll('1' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('168.6856859' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('2.99992003187' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('0.000005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('0.0000000001' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('0.00005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("130.123456", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll("90", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("😉⭐⭐⭐⭐") 
+end
+
+function b2()
+EV1 = gg.choice({
+"✅ Activate",
+"❎ Deactivate",
+"▶ Fix Antenna",
+"Back to Menu"
+}, nil, "Antenna😝")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bbb1()
+end
+if EV1 == 2 then
+bbb2()
+end
+if EV1 == 3 then
+bbb3()
+end
+if EV1 == 4 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+function bbb1()
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.79084777832' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.71006774902' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.18151855469' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.84295654297' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Activated⚡")
+end
+
+function bbb2()
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('168.6856859' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Deactivated⚡")
+end
+
+function bbb3()
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber('168.6856859' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('999999.79084' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Fixed⚡")
+end
+
+function b3()
+menu1 = gg.choice({
+'✅ Activate',
+'❎ Deactivate',
+'Back to Menu'},
+nil,'Aimbot 🤡 ▶ Use Laser For it To work properly ')
+if menu1 == 1 then a1() end
+if menu1 == 2 then a2() end
+if menu1 == 3 then HOME() end
+GLWW=-1
+end
+  
+function a1()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "巨人"},
+{["value"] = -88.02313995361328, ["type"] = 16},
+{["lv"] = 1.0, ["offset"] = 56, ["type"] = 16},
+{["lv"] = 1.0, ["offset"] = 60, ["type"] = 16},
+{["lv"] = 1.0, ["offset"] = 64, ["type"] = 16},
+}
+qmxg = {
+{["value"] = 10, ["offset"] = 56, ["type"] = 16},
+{["value"] = 10, ["offset"] = 60, ["type"] = 16},
+{["value"] = 10, ["offset"] = 64, ["type"] = 16},
+}
+xqmnb(qmnb)
+end
+
+function a2()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "关闭巨人"},
+{["value"] = -88.02313995361328, ["type"] = 16},
+{["lv"] = 10.0, ["offset"] = 56, ["type"] = 16},
+{["lv"] = 10.0, ["offset"] = 60, ["type"] = 16},
+{["lv"] = 10.0, ["offset"] = 64, ["type"] = 16},
+}
+qmxg = {
+{["value"] = 1, ["offset"] = 56, ["type"] = 16},
+{["value"] = 1, ["offset"] = 60, ["type"] = 16},
+{["value"] = 1, ["offset"] = 64, ["type"] = 16},
+}
+xqmnb(qmnb)
+end
+
+function b4()
+EV1 = gg.choice({
+"✅ Activate",
+"❎ Deactivate",
+"Back to Menu"
+}, nil, "Clear Lands😌 ▶ Lets play Hide & Seek😜")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bbbbb1()
+end
+if EV1 == 2 then
+bbbbb2()
+end
+if EV1 == 3 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+ function bbbbb1()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('0.000005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('2.99992003187' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Activated⚡")
+end
+
+function bbbbb2()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('2.99992003187' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('0.000005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Deactivated⚡")
+end
+
+function b5()
+EV1 = gg.choice({
+"✅ Activate",
+"❎ Deactivate",
+"Back to Menu"
+}, nil, "Night Vision😎")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bbbbbb1()
+end
+if EV1 == 2 then
+bbbbbb2()
+end
+if EV1 == 3 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+ function bbbbbb1()
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber("4.76055813e21;", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(7000)
+gg.editAll("8.001234567", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Activated⚡")
+end
+function bbbbbb2()
+gg.clearResults()
+gg.setRanges(gg.REGION_VIDEO)
+gg.searchNumber("8.001234567", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(10000)
+gg.editAll("1", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Putanginang liwanag!😵")
+end
+
+function b6()
+EV1 = gg.choice({
+"▶ Rocket Turrent Spam",
+"▶ Underwater Shot",
+"Back to Menu"
+}, nil, "Spam Code 🚀(0,17) Water Code 🌊(1,1)")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bbbbbbb1()
+end
+if EV1 == 2 then
+bbbbbbb2()
+end
+if EV1 == 3 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+ function bbbbbbb1()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("0.0005;0.0001", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("0.0005", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll("0.17", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Activated⚡")
+ end
+
+function bbbbbbb2()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("6;1:34", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1.0", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1) 
+gg.getResults(700)
+gg.editAll("1.1", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Activated⚡")
+end
+
+function b7()
+menu1 = gg.choice({
+'✅ Activate',
+'❎ Deactivate',
+'Back to Menu'},
+nil,'X Ray ▶ You can run but you cant hide 👻')
+if menu1 == 1 then c1() end
+if menu1 == 2 then c2() end
+if menu1 == 3 then HOME() end
+GLWW=-1
+end
+
+function c1()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "开启透视"},
+{["value"] = 1189765120, ["type"] = 4},
+{["lv"] = 1065353216, ["offset"] = 4, ["type"] = 4},
+{["lv"] = 1120403456, ["offset"] = 8, ["type"] = 4},
+{["lv"] = 1144750080, ["offset"] = 12, ["type"] = 4},
+}
+qmxg = {
+{["value"] = 0, ["offset"] = -728, ["type"] = 16},}
+xqmnb(qmnb)
+end
+
+function c2()
+qmnb = {
+{["memory"] = 4},
+{["name"] = "关闭透视"},
+{["value"] = 1189765120, ["type"] = 4},
+{["lv"] = 1065353216, ["offset"] = 4, ["type"] = 4},
+{["lv"] = 1120403456, ["offset"] = 8, ["type"] = 4},
+{["lv"] = 1144750080, ["offset"] = 12, ["type"] = 4},
+}
+qmxg = {
+{["value"] = 1, ["offset"] = -728, ["type"] = 16},}
+xqmnb(qmnb)
+end
+
+function b8()
+EV1 = gg.choice({
+"✅ Activate",
+"❎ Deactivate",
+"Back to Menu"
+}, nil, "Wide Veiw 🌍😎")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bbbbbbbb1()
+end
+if EV1 == 2 then
+bbbbbbbb2()
+end
+if EV1 == 3 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+ function bbbbbbbb1()
+ gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("90;7", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("90", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll("130.123456", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Activated⚡")
+end
+
+function bbbbbbbb2()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("130.123456", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll("90", gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Deactivated⚡")
+end
+
+function b9()
+EV1 = gg.choice({
+"▶ Body Colors ",
+"▶ No Recoil Guns ",
+"✅ H20 Activate",
+"❎ H20 Deactivate",
+"Back to Menu"
+}, nil, "Body Colors 💛❤💚💙 | Headshot No Recoil | Clear Water")
+if EV1 == nil then
+else
+if EV1 == 1 then
+bbbbbbbbb1()
+end
+if EV1 == 2 then
+bbbbbbbbb2()
+end
+if EV1 == 3 then
+bbbbbbbbb3()
+end
+if EV1 == 4 then
+bbbbbbbbb4()
+end
+if EV1 == 5 then
+end
+Main()
+    end
+    XGCK = -1
+  end
+  
+ function bbbbbbbbb1()
+ gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("0.08152;0.2;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(500)
+gg.editAll('2',gg.TYPE_FLOAT)
+gg.clearResults()
+gg.toast("Hack has been successfully installed")
+end
+
+function bbbbbbbbb2()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber("8.5;1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.searchNumber("1", gg.TYPE_FLOAT, false, gg.SIGN_EQUAL, 0, -1)
+gg.getResults(5000)
+gg.editAll('0.0000000001' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Hack has been successfully installed")
+end
+
+function bbbbbbbbb3()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('0.00005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('0.0000000001' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Hack has been successfully installed")
+end
+
+function bbbbbbbbb4()
+gg.clearResults()
+gg.setRanges(gg.REGION_C_ALLOC)
+gg.searchNumber('0.0000000001' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.getResults(100)
+gg.editAll('0.00005' , gg.TYPE_FLOAT, false, gg.SIGN_EQUAL)
+gg.clearResults()
+gg.toast("Hack has been successfully installed")
+end
+
+function Exit()
+print("Thank you for using vercas hack")
+os.exit()
+end
+while true do
+  if gg.isVisible(true) then
+    XGCK = 1
+    gg.setVisible(false)
+  end
+  
+  function HOME()
+kele0=1
+Main()
+end
+  
+  
+ 
+  if XGCK == 1 then
+    Main()
+  end
+ end
